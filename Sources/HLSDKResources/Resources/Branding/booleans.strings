@@ -1,0 +1,15 @@
+/* 
+  File.strings
+  VIPAAR
+
+  Created by Hale Xie on 2018/10/18.
+  Copyright © 2018 VIPAAR. All rights reserved.
+*/
+/**
+ Examples:
+ If the flag is true, the value can be "Y", "y", "T", "t", or a digit 1-9
+ "flag_1" = "Y";
+ "flag_2" = "N";
+ "flag_3" = "true";
+ */
+

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="gbd-CF-xOg">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController-FavoriteKnowledges" id="gJo-KP-MP7" customClass="VIPNotAvailableBannerHidableNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="03_knowledges" selectedImage="03_knowledges_active" id="luL-Na-7VH">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceTitle" value="KnowledgesTabbarTitle"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eDf-ES-JMa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TYt-h5-PXt" kind="relationship" relationship="rootViewController" id="MSB-w8-h4y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4A-iF-Jah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="83"/>
+        </scene>
+        <!--Knowledge List View Controller-->
+        <scene sceneID="8bF-Eu-kwo">
+            <objects>
+                <viewController storyboardIdentifier="HLKnowledgeListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ui-jd-ZQV" customClass="HLKnowledgeListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ArY-3w-JFQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4WO-UH-VKy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wke-Fd-Iq3"/>
+                    <connections>
+                        <segue destination="gJo-KP-MP7" kind="presentation" identifier="FavoriteKnowledge_ipad" id="Zu0-xZ-ako"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41I-o8-e1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.4140625" y="82.576866764275252"/>
+        </scene>
+        <!--Favorite Knowledge View Controller-->
+        <scene sceneID="jZA-uv-uCI">
+            <objects>
+                <viewController storyboardIdentifier="HLFavoriteKnowledgeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TYt-h5-PXt" customClass="HLFavoriteKnowledgeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FT6-uB-wm5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-XH-cst">
+                                <rect key="frame" x="0.0" y="56" width="393" height="0.0"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81a-he-sZI" customClass="MessageLabelView" customModule="FBSDK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" placeholder="YES" id="PA6-i0-1Wa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hUS-Qa-koy" customClass="KnowledgeListTableView" customModule="FBSDK">
+                                <rect key="frame" x="0.0" y="56" width="393" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWf-I1-ZCf" customClass="FloatButton" customModule="FBSDK">
+                                <rect key="frame" x="325" y="701" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="euh-jQ-cvf"/>
+                                    <constraint firstAttribute="width" constant="60" id="gD9-6b-pGz"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="15_add"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="15_add"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createKnowledgeTap:" destination="TYt-h5-PXt" eventType="touchUpInside" id="Ya6-7p-LT1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aPS-y7-au4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aPS-y7-au4" firstAttribute="bottom" secondItem="rWf-I1-ZCf" secondAttribute="bottom" constant="8" id="4EB-HA-B5h"/>
+                            <constraint firstItem="hUS-Qa-koy" firstAttribute="top" secondItem="nZh-XH-cst" secondAttribute="bottom" id="Bee-DV-GQk"/>
+                            <constraint firstItem="aPS-y7-au4" firstAttribute="trailing" secondItem="hUS-Qa-koy" secondAttribute="trailing" id="FMg-9v-E7o"/>
+                            <constraint firstItem="nZh-XH-cst" firstAttribute="leading" secondItem="aPS-y7-au4" secondAttribute="leading" id="Hkc-wh-oTM"/>
+                            <constraint firstItem="aPS-y7-au4" firstAttribute="bottom" secondItem="hUS-Qa-koy" secondAttribute="bottom" id="IkF-AA-24j"/>
+                            <constraint firstItem="nZh-XH-cst" firstAttribute="top" secondItem="aPS-y7-au4" secondAttribute="top" id="NDf-as-uZy"/>
+                            <constraint firstItem="aPS-y7-au4" firstAttribute="trailing" secondItem="nZh-XH-cst" secondAttribute="trailing" id="X6g-ex-rdF"/>
+                            <constraint firstItem="hUS-Qa-koy" firstAttribute="leading" secondItem="aPS-y7-au4" secondAttribute="leading" id="ZDS-IE-q2O"/>
+                            <constraint firstItem="aPS-y7-au4" firstAttribute="trailing" secondItem="rWf-I1-ZCf" secondAttribute="trailing" constant="8" id="eqG-6G-rl4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W7K-P0-vhJ">
+                        <rightBarButtonItems>
+                            <barButtonItem image="15_option" id="TU2-Qq-DBr">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="15_option"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionTap:" destination="TYt-h5-PXt" id="dO2-ni-yRu"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="15_search" id="SUK-NA-JKW">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="15_search"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchTap:" destination="TYt-h5-PXt" id="DHp-k5-ArI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createKnowledgeButton" destination="rWf-I1-ZCf" id="dPc-Ut-0Hi"/>
+                        <outlet property="messageLabelView" destination="81a-he-sZI" id="1OV-jC-wOp"/>
+                        <outlet property="tableView" destination="hUS-Qa-koy" id="zZy-nW-5rQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzK-oK-lW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="83"/>
+        </scene>
+        <!--Create Knowledge View Controller-->
+        <scene sceneID="7ta-ky-GJP">
+            <objects>
+                <viewController storyboardIdentifier="HLCreateKnowledgeViewController" id="USa-5k-pjP" customClass="HLCreateKnowledgeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3D-5W-DmE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-Xf-8B5" customClass="CreateKnowledgeTableView" customModule="FBSDK">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-a9-Vhg" customClass="FloatButton" customModule="FBSDK">
+                                <rect key="frame" x="325" y="750" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VwF-J9-4fh"/>
+                                    <constraint firstAttribute="width" constant="60" id="lMf-E6-Uey"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="16_checkmark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="16_checkmark"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addKnowledge" destination="USa-5k-pjP" eventType="touchUpInside" id="40U-lL-Ms0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QHV-ue-pjZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QHV-ue-pjZ" firstAttribute="bottom" secondItem="r6h-Xf-8B5" secondAttribute="bottom" id="5hP-Vz-EWw"/>
+                            <constraint firstItem="QHV-ue-pjZ" firstAttribute="trailing" secondItem="r6h-Xf-8B5" secondAttribute="trailing" id="BGa-in-zoN"/>
+                            <constraint firstItem="r6h-Xf-8B5" firstAttribute="leading" secondItem="QHV-ue-pjZ" secondAttribute="leading" id="I4m-8T-bq3"/>
+                            <constraint firstItem="QHV-ue-pjZ" firstAttribute="trailing" secondItem="GTd-a9-Vhg" secondAttribute="trailing" constant="8" id="RB1-LI-Uoq"/>
+                            <constraint firstItem="r6h-Xf-8B5" firstAttribute="top" secondItem="QHV-ue-pjZ" secondAttribute="top" id="mhM-HA-YNW"/>
+                            <constraint firstItem="QHV-ue-pjZ" firstAttribute="bottom" secondItem="GTd-a9-Vhg" secondAttribute="bottom" constant="8" id="pll-9R-gzn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pPv-e0-YWN">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceTitle" value="CreateKnowledgeTitle"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addKnowledgeButton" destination="GTd-a9-Vhg" id="I3m-Mm-OQJ"/>
+                        <outlet property="tableView" destination="r6h-Xf-8B5" id="1aw-KO-6tQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nd7-3Q-KIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="-1284"/>
+        </scene>
+        <!--Knowledge Details View Controller-->
+        <scene sceneID="ac7-TR-7u3">
+            <objects>
+                <viewController id="Qh1-GB-ato" customClass="HLKnowledgeDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tOG-Fq-vdc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S0N-Kw-4UC" customClass="KnowledgeDetailsTableView" customModule="FBSDK">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bNF-nd-3kh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bNF-nd-3kh" firstAttribute="trailing" secondItem="S0N-Kw-4UC" secondAttribute="trailing" id="9de-zZ-rVR"/>
+                            <constraint firstItem="S0N-Kw-4UC" firstAttribute="leading" secondItem="bNF-nd-3kh" secondAttribute="leading" id="lOL-oY-QFr"/>
+                            <constraint firstItem="S0N-Kw-4UC" firstAttribute="top" secondItem="bNF-nd-3kh" secondAttribute="top" id="qa2-1V-otM"/>
+                            <constraint firstItem="bNF-nd-3kh" firstAttribute="bottom" secondItem="S0N-Kw-4UC" secondAttribute="bottom" id="x04-hB-z0X"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="J4j-kv-Ent">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceTitle" value="KnowledgeDetailsTitle"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="S0N-Kw-4UC" id="vpn-Bj-REu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XwU-RG-z4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="-653"/>
+        </scene>
+        <!--Not Available Banner Hidable Navigation Controller-->
+        <scene sceneID="cay-2g-DAX">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController-KnowledgeDetails" id="NjO-TP-Dgg" customClass="VIPNotAvailableBannerHidableNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dof-bd-Rfq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qh1-GB-ato" kind="relationship" relationship="rootViewController" id="ncK-ve-55W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIu-Vn-9lq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771" y="-653"/>
+        </scene>
+        <!--Annotation Step Editor View Controller-->
+        <scene sceneID="h0E-5I-yIF">
+            <objects>
+                <viewController storyboardIdentifier="HLAnnotationStepEditorViewController" id="F4w-g7-kXV" customClass="HLAnnotationStepEditorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Rc-ue-ve1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xcN-3Q-cUz" customClass="AnnotationStepEditorTableView" customModule="FBSDK">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6OL-Yo-5Fr"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xcN-3Q-cUz" firstAttribute="top" secondItem="6OL-Yo-5Fr" secondAttribute="top" id="PSh-Dx-cHr"/>
+                            <constraint firstItem="xcN-3Q-cUz" firstAttribute="leading" secondItem="6OL-Yo-5Fr" secondAttribute="leading" id="WME-Xq-Hjp"/>
+                            <constraint firstItem="6OL-Yo-5Fr" firstAttribute="trailing" secondItem="xcN-3Q-cUz" secondAttribute="trailing" id="bTa-wE-UDS"/>
+                            <constraint firstItem="6OL-Yo-5Fr" firstAttribute="bottom" secondItem="xcN-3Q-cUz" secondAttribute="bottom" id="dUq-R0-5xA"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EwK-9d-ZTL">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceTitle" value="AnnotationStepEditorTitle"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="xcN-3Q-cUz" id="M1l-A5-PMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ite-gT-E8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="779"/>
+        </scene>
+        <!--Not Available Banner Hidable Navigation Controller-->
+        <scene sceneID="5aD-9M-rhm">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationController-KnowledgeSnippet" id="nS7-SC-BNz" customClass="VIPNotAvailableBannerHidableNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vsn-Yb-Owi">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EEm-yu-Gw8" kind="relationship" relationship="rootViewController" id="GNW-jt-ty8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHZ-Kj-6P3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-827" y="-1976"/>
+        </scene>
+        <!--Knowledge Snippet View Controller-->
+        <scene sceneID="uSe-34-9Eh">
+            <objects>
+                <viewController id="EEm-yu-Gw8" customClass="HLKnowledgeSnippetViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HaL-zC-1uf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AzD-q6-VIE" customClass="KnowledgeSnippetTableView" customModule="FBSDK">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2in-0Q-LSd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AzD-q6-VIE" firstAttribute="top" secondItem="2in-0Q-LSd" secondAttribute="top" id="4wn-lU-Imt"/>
+                            <constraint firstItem="AzD-q6-VIE" firstAttribute="leading" secondItem="2in-0Q-LSd" secondAttribute="leading" id="735-6M-gID"/>
+                            <constraint firstAttribute="bottom" secondItem="AzD-q6-VIE" secondAttribute="bottom" id="G7r-dk-bOC"/>
+                            <constraint firstItem="2in-0Q-LSd" firstAttribute="trailing" secondItem="AzD-q6-VIE" secondAttribute="trailing" id="myg-Qc-Fcb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oS5-NQ-1L9"/>
+                    <connections>
+                        <outlet property="tableView" destination="AzD-q6-VIE" id="gJ8-VE-liD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nto-KR-foV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="-1976"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hZf-uc-wq4">
+            <objects>
+                <navigationController storyboardIdentifier="SelectFolder_ipad" id="LIB-or-IrL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C8I-Kq-6W4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GHe-8f-dQc" kind="relationship" relationship="rootViewController" id="wlM-yg-EG9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIE-dO-64H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="1462"/>
+        </scene>
+        <!--Knowledge Folder Selector View Controller-->
+        <scene sceneID="yfk-8C-Uno">
+            <objects>
+                <viewController storyboardIdentifier="HLKnowledgeFolderSelectorViewController" id="GHe-8f-dQc" customClass="HLKnowledgeFolderSelectorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UO2-xF-q1w">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wUr-qG-ORO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x91-nQ-yFg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dbj-2Y-ANs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="1462"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vJB-9k-YIt">
+            <objects>
+                <navigationController storyboardIdentifier="SelectFile_ipad" id="99e-IV-qR4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lut-V5-SwL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BDg-jT-l0k" kind="relationship" relationship="rootViewController" id="2Yg-v7-59L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFU-IG-R8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="2120"/>
+        </scene>
+        <!--Knowledge File Selector View Controller-->
+        <scene sceneID="4Zu-NW-J7I">
+            <objects>
+                <viewController storyboardIdentifier="HLKnowledgeFileSelectorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BDg-jT-l0k" customClass="HLKnowledgeFileSelectorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8SJ-mX-1Cl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="inr-Lp-obx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O52-TC-OZu">
+                        <rightBarButtonItems>
+                            <barButtonItem image="15_option" id="c85-oT-pY1">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="15_option"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionTap:" destination="BDg-jT-l0k" id="Wrx-0H-6BK"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="15_search" id="B0e-O0-Wz7">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="15_search"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchTap:" destination="BDg-jT-l0k" id="1N8-Lq-Zke"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7l-EH-5rc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="2120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="03_knowledges" width="27" height="27"/>
+        <image name="03_knowledges_active" width="27" height="27"/>
+        <image name="15_add" width="24" height="24"/>
+        <image name="15_option" width="23" height="23"/>
+        <image name="15_search" width="18" height="18"/>
+        <image name="16_checkmark" width="18" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

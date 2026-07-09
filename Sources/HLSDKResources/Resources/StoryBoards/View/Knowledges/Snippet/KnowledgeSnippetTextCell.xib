@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="145" id="AKY-96-rYb" customClass="KnowledgeSnippetTextCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AKY-96-rYb" id="eTZ-QC-vSA">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-mt-yrT">
+                        <rect key="frame" x="28" y="46.5" width="319" height="52"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="label" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bqx-Gg-4BF">
+                                <rect key="frame" x="8" y="8" width="303" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="1ls-8g-m9A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bqx-Gg-4BF" secondAttribute="bottom" constant="8" id="8EQ-my-n2v"/>
+                            <constraint firstItem="bqx-Gg-4BF" firstAttribute="leading" secondItem="Tpi-mt-yrT" secondAttribute="leading" constant="8" id="8sT-4H-hNr"/>
+                            <constraint firstItem="bqx-Gg-4BF" firstAttribute="top" secondItem="Tpi-mt-yrT" secondAttribute="top" constant="8" id="OMr-c0-Kiw"/>
+                            <constraint firstAttribute="trailing" secondItem="bqx-Gg-4BF" secondAttribute="trailing" constant="8" id="cpd-0k-izz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Tpi-mt-yrT" firstAttribute="centerY" secondItem="eTZ-QC-vSA" secondAttribute="centerY" id="U5z-j5-4qz"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Tpi-mt-yrT" secondAttribute="bottom" constant="8" id="Ve7-bO-cHQ"/>
+                    <constraint firstItem="Tpi-mt-yrT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eTZ-QC-vSA" secondAttribute="topMargin" constant="8" id="sIM-nz-iaE"/>
+                    <constraint firstItem="Tpi-mt-yrT" firstAttribute="leading" secondItem="eTZ-QC-vSA" secondAttribute="leadingMargin" constant="8" id="y9a-1F-9rN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Tpi-mt-yrT" secondAttribute="trailing" constant="8" id="yqe-TO-rGN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cellTextLabel" destination="bqx-Gg-4BF" id="OVi-au-3W7"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="132"/>
+        </tableViewCell>
+    </objects>
+</document>

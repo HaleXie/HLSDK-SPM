@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="35"
+   height="35"
+   viewBox="0 0 35 35"
+   fill="none"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="AI-solid 2-01 1.svg"
+   inkscape:version="1.1-alpha (17bc9184, 2021-03-28)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs31" />
+  <sodipodi:namedview
+     id="namedview29"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     width="35px"
+     inkscape:zoom="10.913043"
+     inkscape:cx="34.958167"
+     inkscape:cy="34.454183"
+     inkscape:window-width="1296"
+     inkscape:window-height="996"
+     inkscape:window-x="109"
+     inkscape:window-y="345"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg27" />
+  <path
+     d="m 28.741919,12.840077 -1.645797,-3.2372645 -1.651339,3.2372645 -3.291552,1.615869 3.291552,1.615912 1.651339,3.237264 1.645797,-3.237264 3.297136,-1.615912 z"
+     fill="#ffffff"
+     id="path21"
+     style="stroke-width:0.42566" />
+  <path
+     d="m 21.269203,6.9660325 -0.995245,-1.954379 -0.995288,1.954379 -1.99049,0.9771726 1.99049,0.9771726 0.995288,1.9543883 0.995245,-1.9543883 1.984949,-0.9771726 z"
+     fill="#ffffff"
+     id="path23"
+     style="stroke-width:0.42566" />
+  <path
+     d="m 22.848245,18.446588 -4.748336,-2.331076 -2.374146,-4.662069 -0.92299,-1.8179005 -0.922947,1.8124175 -2.374189,4.662111 -4.7483011,2.331034 -1.8515091,0.911671 1.8459504,0.906229 4.7483178,2.331035 2.374146,4.66211 0.928532,1.812417 0.92299,-1.812417 2.374146,-4.66211 4.748336,-2.331035 1.845937,-0.906229 z"
+     fill="#ffffff"
+     id="path25"
+     style="stroke-width:0.42566" />
+</svg>

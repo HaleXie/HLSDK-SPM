@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="tgM-o8-jGq" customClass="SelectionDialogCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tgM-o8-jGq" id="NqP-jY-GhH">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f49-yu-sTc">
+                        <rect key="frame" x="30" y="7" width="352" height="30"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="6Ar-NW-J2J">
+                        <rect key="frame" x="388" y="13" width="18" height="18"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="f49-yu-sTc" secondAttribute="bottom" constant="7" id="11p-Qn-axa"/>
+                    <constraint firstItem="f49-yu-sTc" firstAttribute="leading" secondItem="NqP-jY-GhH" secondAttribute="leading" constant="30" id="XrL-fG-w8t"/>
+                    <constraint firstAttribute="trailing" secondItem="6Ar-NW-J2J" secondAttribute="trailing" constant="8" id="be2-IZ-tn2"/>
+                    <constraint firstItem="6Ar-NW-J2J" firstAttribute="centerY" secondItem="NqP-jY-GhH" secondAttribute="centerY" id="dNH-qA-dTn"/>
+                    <constraint firstAttribute="trailing" secondItem="f49-yu-sTc" secondAttribute="trailing" constant="32" id="hl0-N0-WxD"/>
+                    <constraint firstItem="f49-yu-sTc" firstAttribute="top" secondItem="NqP-jY-GhH" secondAttribute="top" constant="7" id="seY-6Y-w1M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bottomTitleLabelLayoutConstraint" destination="11p-Qn-axa" id="hGO-ta-Pgf"/>
+                <outlet property="checkmarkImageView" destination="6Ar-NW-J2J" id="XJA-DL-8WI"/>
+                <outlet property="leftTitleLabelLayoutConstraint" destination="XrL-fG-w8t" id="HmG-J5-VPX"/>
+                <outlet property="rightTitleLabelLayoutConstraint" destination="hl0-N0-WxD" id="bEF-uk-pEW"/>
+                <outlet property="titleLabel" destination="f49-yu-sTc" id="JT0-MG-JsG"/>
+                <outlet property="topTitleLabelLayoutConstraint" destination="seY-6Y-w1M" id="T8k-qV-K9V"/>
+            </connections>
+            <point key="canvasLocation" x="-192" y="317.54122938530736"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_checkmark" width="18" height="18"/>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lMk-7l-omy" customClass="ChatRequestTicketView" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="piO-ZQ-5lq">
+                    <rect key="frame" x="16" y="16" width="314" height="75"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsC-29-LXi">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLE-Y9-CkK">
+                                    <rect key="frame" x="0.0" y="6" width="314" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="ChatAlertAcceptNewTicketRequest"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="CLE-Y9-CkK" secondAttribute="trailing" id="1e8-uY-G8G"/>
+                                <constraint firstItem="CLE-Y9-CkK" firstAttribute="leading" secondItem="TsC-29-LXi" secondAttribute="leading" id="Hbj-yC-wSx"/>
+                                <constraint firstItem="CLE-Y9-CkK" firstAttribute="top" secondItem="TsC-29-LXi" secondAttribute="top" constant="6" id="Lg0-3P-xBI"/>
+                                <constraint firstAttribute="bottom" secondItem="CLE-Y9-CkK" secondAttribute="bottom" constant="6" id="e9b-w9-VuI"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="n8C-iS-k5e">
+                            <rect key="frame" x="0.0" y="30" width="314" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wz-G2-xqs">
+                                    <rect key="frame" x="0.0" y="0.0" width="149.5" height="45"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="DECLINE">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="DECLINE"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="declineTap" destination="lMk-7l-omy" eventType="touchUpInside" id="ev8-H3-H4E"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwF-mM-lff">
+                                    <rect key="frame" x="164.5" y="0.0" width="149.5" height="45"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="ACCEPT">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="ACCEPT"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="acceptTap" destination="lMk-7l-omy" eventType="touchUpInside" id="s5g-2I-EfC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="tNg-3v-WiS"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Kac-8v-DKD"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="piO-ZQ-5lq" firstAttribute="leading" secondItem="Kac-8v-DKD" secondAttribute="leading" constant="16" id="Djl-sn-nrj"/>
+                <constraint firstItem="piO-ZQ-5lq" firstAttribute="top" secondItem="lMk-7l-omy" secondAttribute="top" constant="16" id="US7-gD-aok"/>
+                <constraint firstAttribute="bottom" secondItem="piO-ZQ-5lq" secondAttribute="bottom" constant="16" id="oSo-pY-fXL"/>
+                <constraint firstItem="Kac-8v-DKD" firstAttribute="trailing" secondItem="piO-ZQ-5lq" secondAttribute="trailing" constant="16" id="pYk-1j-3CO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="acceptButton" destination="WwF-mM-lff" id="mMa-OC-jri"/>
+                <outlet property="declineButton" destination="6wz-G2-xqs" id="gZT-z3-sAy"/>
+                <outlet property="titleLabel" destination="CLE-Y9-CkK" id="c9n-pz-ELs"/>
+            </connections>
+            <point key="canvasLocation" x="240.57971014492756" y="137.61160714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

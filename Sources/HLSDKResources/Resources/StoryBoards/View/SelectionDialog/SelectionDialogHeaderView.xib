@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectionDialogHeaderView" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="467" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7qC-ew-ccz">
+                    <rect key="frame" x="0.0" y="0.0" width="467" height="88"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kv-7n-QMK">
+                            <rect key="frame" x="0.0" y="0.0" width="467" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Filter by" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqB-zU-fbw">
+                                    <rect key="frame" x="15" y="15" width="402" height="19"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="Ji9-xj-ECK"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="900" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4n-vm-a4r" customClass="ExpandedTouchAreaButton" customModule="FBSDK">
+                                    <rect key="frame" x="432" y="12.5" width="19" height="19"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="19" id="PJI-Lh-Yw4"/>
+                                        <constraint firstAttribute="width" constant="19" id="gdf-S1-Srr"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="btn_close"/>
+                                    <connections>
+                                        <action selector="closeTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="VEE-pi-whT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="v4n-vm-a4r" firstAttribute="centerY" secondItem="9kv-7n-QMK" secondAttribute="centerY" id="26Z-UQ-9v1"/>
+                                <constraint firstItem="v4n-vm-a4r" firstAttribute="leading" secondItem="eqB-zU-fbw" secondAttribute="trailing" constant="15" id="2wd-nM-r8z"/>
+                                <constraint firstAttribute="trailing" secondItem="v4n-vm-a4r" secondAttribute="trailing" constant="16" id="7Ux-jz-5dS"/>
+                                <constraint firstItem="eqB-zU-fbw" firstAttribute="leading" secondItem="9kv-7n-QMK" secondAttribute="leading" constant="15" id="l71-vl-zxz"/>
+                                <constraint firstItem="eqB-zU-fbw" firstAttribute="top" secondItem="9kv-7n-QMK" secondAttribute="top" constant="15" id="rot-rI-Rlw"/>
+                                <constraint firstAttribute="bottom" secondItem="eqB-zU-fbw" secondAttribute="bottom" constant="10" id="xuf-KH-7E0"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcB-jA-Ai5">
+                            <rect key="frame" x="0.0" y="44" width="467" height="44"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-jy-K0d">
+                                    <rect key="frame" x="0.0" y="0.0" width="467" height="44"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="fyj-jy-K0d" firstAttribute="leading" secondItem="PcB-jA-Ai5" secondAttribute="leading" id="AX6-rz-50E"/>
+                                <constraint firstAttribute="height" constant="44" id="H9b-Aw-60U"/>
+                                <constraint firstAttribute="trailing" secondItem="fyj-jy-K0d" secondAttribute="trailing" id="McI-n3-iW6"/>
+                                <constraint firstItem="fyj-jy-K0d" firstAttribute="top" secondItem="PcB-jA-Ai5" secondAttribute="top" id="c04-hB-ke2"/>
+                                <constraint firstAttribute="bottom" secondItem="fyj-jy-K0d" secondAttribute="bottom" id="elZ-wC-sbf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7qC-ew-ccz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Pp2-dX-HcY"/>
+                <constraint firstItem="7qC-ew-ccz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QdU-QN-F5J"/>
+                <constraint firstAttribute="bottom" secondItem="7qC-ew-ccz" secondAttribute="bottom" id="kir-YO-bUw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7qC-ew-ccz" secondAttribute="trailing" id="lpj-qf-Fja"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="v4n-vm-a4r" id="ZHf-K5-Kog"/>
+                <outlet property="searchBar" destination="fyj-jy-K0d" id="Hag-NB-WS3"/>
+                <outlet property="searchWrapViewHeightConstraint" destination="H9b-Aw-60U" id="Vij-kZ-ueR"/>
+                <outlet property="titleLabel" destination="eqB-zU-fbw" id="VMT-9d-k0K"/>
+                <outlet property="titleLabelBottomConstraint" destination="xuf-KH-7E0" id="1G5-nC-gbB"/>
+                <outlet property="titleLabelTopConstraint" destination="rot-rI-Rlw" id="pP2-gI-nmo"/>
+            </connections>
+            <point key="canvasLocation" x="22" y="321"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_close" width="48" height="48"/>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HLWorkboxListView">
+            <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Umn-NR-Kjr">
+                    <rect key="frame" x="0.0" y="24" width="1180" height="0.0"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khf-F4-LoP" customClass="MessageLabelView" customModule="FBSDK">
+                            <rect key="frame" x="0.0" y="0.0" width="1180" height="48"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="6az-0q-wkm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="mB9-kG-7FP"/>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W5K-MO-WtF" customClass="TicketListTableView" customModule="FBSDK">
+                    <rect key="frame" x="0.0" y="24" width="1180" height="776"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOv-B9-NFO" userLabel="Create Ticket Button" customClass="FloatButton" customModule="FBSDK">
+                    <rect key="frame" x="1112" y="732" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="TNS-jR-5yY"/>
+                        <constraint firstAttribute="height" constant="60" id="ZdM-vv-8jk"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="" image="15_add"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EOv-B9-NFO" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="1Ki-uL-MXr"/>
+                <constraint firstItem="W5K-MO-WtF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Aeb-31-apn"/>
+                <constraint firstItem="EOv-B9-NFO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-8" id="BWu-Vi-UGn"/>
+                <constraint firstItem="W5K-MO-WtF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ECg-5U-c65"/>
+                <constraint firstItem="Umn-NR-Kjr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="H3z-Vy-9ui"/>
+                <constraint firstItem="Umn-NR-Kjr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aTz-JO-TqX"/>
+                <constraint firstItem="W5K-MO-WtF" firstAttribute="top" secondItem="Umn-NR-Kjr" secondAttribute="bottom" id="lr9-r2-JYj"/>
+                <constraint firstItem="W5K-MO-WtF" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="qBe-KE-q5M"/>
+                <constraint firstAttribute="trailing" secondItem="Umn-NR-Kjr" secondAttribute="trailing" id="qdl-TS-aid"/>
+            </constraints>
+            <connections>
+                <outlet property="createTicketButton" destination="EOv-B9-NFO" id="eUz-g3-qgs"/>
+                <outlet property="messageLabelView" destination="khf-F4-LoP" id="DRR-kw-lT5"/>
+                <outlet property="tableView" destination="W5K-MO-WtF" id="ajc-xz-UG3"/>
+            </connections>
+            <point key="canvasLocation" x="122.54237288135594" y="-11.707317073170731"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="15_add" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

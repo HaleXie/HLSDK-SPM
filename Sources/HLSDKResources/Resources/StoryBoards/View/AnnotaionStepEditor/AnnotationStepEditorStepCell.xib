@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" rowHeight="50" id="qgQ-3p-WCh" customClass="AnnotationStepEditorStepCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qgQ-3p-WCh" id="Fio-kp-zj4">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEj-Tc-YHD">
+                        <rect key="frame" x="16" y="13" width="24" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXK-q6-Jcz">
+                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XXK-q6-Jcz" secondAttribute="bottom" id="KlA-NX-ATS"/>
+                            <constraint firstAttribute="trailing" secondItem="XXK-q6-Jcz" secondAttribute="trailing" id="WhJ-et-Mcw"/>
+                            <constraint firstItem="XXK-q6-Jcz" firstAttribute="leading" secondItem="yEj-Tc-YHD" secondAttribute="leading" id="nzx-hK-ewL"/>
+                            <constraint firstItem="XXK-q6-Jcz" firstAttribute="top" secondItem="yEj-Tc-YHD" secondAttribute="top" id="trx-1A-ygP"/>
+                            <constraint firstAttribute="width" constant="24" id="uP6-YJ-zFV"/>
+                            <constraint firstAttribute="height" constant="24" id="yqi-UO-Rm2"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Step description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td5-9Q-12S">
+                        <rect key="frame" x="54" y="15" width="271" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add step decription" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-mS-dpk">
+                        <rect key="frame" x="48" y="8" width="319" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourcePlaceholder" value="AnnotationStepEditorPlaceholder"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="qgQ-3p-WCh" id="9ot-UK-DAK"/>
+                        </connections>
+                    </textField>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jU9-Uy-6O3">
+                        <rect key="frame" x="327" y="10" width="30" height="30"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZP-lO-Sxc">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                <state key="normal" image="selectionIndicatorNotActive"/>
+                                <state key="highlighted" image="selectionIndicatorActive"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Mc1-aE-z9d"/>
+                            <constraint firstAttribute="height" constant="30" id="bsc-Nr-w2H"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yEj-Tc-YHD" firstAttribute="centerY" secondItem="Fio-kp-zj4" secondAttribute="centerY" id="0xE-82-T3h"/>
+                    <constraint firstAttribute="bottom" secondItem="nhc-mS-dpk" secondAttribute="bottom" constant="8" id="0yE-uq-HUn"/>
+                    <constraint firstItem="td5-9Q-12S" firstAttribute="centerY" secondItem="yEj-Tc-YHD" secondAttribute="centerY" id="4aX-HC-f2D"/>
+                    <constraint firstItem="jU9-Uy-6O3" firstAttribute="leading" secondItem="td5-9Q-12S" secondAttribute="trailing" constant="2" id="GRK-wZ-HLa"/>
+                    <constraint firstItem="yEj-Tc-YHD" firstAttribute="leading" secondItem="Fio-kp-zj4" secondAttribute="leading" constant="16" id="GkG-yJ-aMM"/>
+                    <constraint firstItem="nhc-mS-dpk" firstAttribute="top" secondItem="Fio-kp-zj4" secondAttribute="top" constant="8" id="JIu-yu-f8a"/>
+                    <constraint firstAttribute="trailing" secondItem="nhc-mS-dpk" secondAttribute="trailing" constant="8" id="Lcm-hm-obu"/>
+                    <constraint firstAttribute="trailing" secondItem="jU9-Uy-6O3" secondAttribute="trailing" constant="18" id="MUo-0H-Js2"/>
+                    <constraint firstItem="nhc-mS-dpk" firstAttribute="leading" secondItem="yEj-Tc-YHD" secondAttribute="trailing" constant="8" id="gEv-mT-82r"/>
+                    <constraint firstItem="jU9-Uy-6O3" firstAttribute="centerY" secondItem="Fio-kp-zj4" secondAttribute="centerY" id="kxh-Y4-y47"/>
+                    <constraint firstItem="td5-9Q-12S" firstAttribute="leading" secondItem="yEj-Tc-YHD" secondAttribute="trailing" constant="14" id="nvF-Of-L0x"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="deleteButton" destination="0ZP-lO-Sxc" id="Ngi-lZ-6Op"/>
+                <outlet property="editTextField" destination="nhc-mS-dpk" id="7Be-kU-zLR"/>
+                <outlet property="stepCounterLabel" destination="XXK-q6-Jcz" id="dGc-g7-4bs"/>
+                <outlet property="stepDescription" destination="td5-9Q-12S" id="W5h-BX-Q00"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="108"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="selectionIndicatorActive" width="22" height="22"/>
+        <image name="selectionIndicatorNotActive" width="22" height="22"/>
+    </resources>
+</document>

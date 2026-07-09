@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="Yd4-nd-j1g" customClass="FolderKnowledgeCompactCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yd4-nd-j1g" id="NxQ-Dm-v7t">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_knowledge_folder" translatesAutoresizingMaskIntoConstraints="NO" id="ezl-uC-kly">
+                        <rect key="frame" x="15" y="10" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ezl-uC-kly" secondAttribute="height" multiplier="1:1" id="lf8-CY-1Fc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdm-fU-Rgw">
+                        <rect key="frame" x="77" y="25.666666666666671" width="306" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ezl-uC-kly" firstAttribute="leading" secondItem="NxQ-Dm-v7t" secondAttribute="leading" constant="15" id="AFI-3g-jYH"/>
+                    <constraint firstAttribute="trailing" secondItem="tdm-fU-Rgw" secondAttribute="trailing" constant="10" id="Bcj-UG-gT6"/>
+                    <constraint firstItem="tdm-fU-Rgw" firstAttribute="centerY" secondItem="NxQ-Dm-v7t" secondAttribute="centerY" id="Tqh-q6-6Vy"/>
+                    <constraint firstAttribute="bottom" secondItem="ezl-uC-kly" secondAttribute="bottom" constant="10" id="abc-w3-3Ld"/>
+                    <constraint firstItem="ezl-uC-kly" firstAttribute="top" secondItem="NxQ-Dm-v7t" secondAttribute="top" constant="10" id="i9o-7z-hle"/>
+                    <constraint firstItem="tdm-fU-Rgw" firstAttribute="leading" secondItem="ezl-uC-kly" secondAttribute="trailing" constant="10" id="ka4-d6-dpT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="folderIconImageView" destination="ezl-uC-kly" id="1ee-kA-NnB"/>
+                <outlet property="folderNameLabel" destination="tdm-fU-Rgw" id="qod-TE-5r7"/>
+            </connections>
+            <point key="canvasLocation" x="174.80916030534351" y="-6.3380281690140849"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_knowledge_folder" width="28" height="24"/>
+    </resources>
+</document>

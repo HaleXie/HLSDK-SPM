@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="145" id="Rz0-p2-fn9" customClass="FolderKnowledgeCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rz0-p2-fn9" id="DUd-RL-Hy1">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="145"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22/03/17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFz-8J-egB">
+                        <rect key="frame" x="74" y="86.5" width="258" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_knowledge_folder" translatesAutoresizingMaskIntoConstraints="NO" id="PrV-H4-gnr">
+                        <rect key="frame" x="24" y="58.5" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="7o6-Iu-Xg1"/>
+                            <constraint firstAttribute="width" secondItem="PrV-H4-gnr" secondAttribute="height" multiplier="1:1" id="AOd-7s-FpS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHC-LJ-qTK">
+                        <rect key="frame" x="74" y="45" width="338" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uON-Km-KGC">
+                        <rect key="frame" x="348" y="79.5" width="56" height="23"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhK-45-mv6">
+                                <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="8H7-i9-iBH"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="ic_favourite"/>
+                                <connections>
+                                    <action selector="onFavoritButtonPressed:" destination="Rz0-p2-fn9" eventType="touchUpInside" id="Gc3-Ey-wln"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8q-5B-nhk">
+                                <rect key="frame" x="33" y="0.0" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="9V0-MB-d4h"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ic_knowledge_info"/>
+                                <connections>
+                                    <action selector="onInfoButtonPressed:" destination="Rz0-p2-fn9" eventType="touchUpInside" id="DCO-mL-ZwZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="i9V-cz-nBf"/>
+                        </constraints>
+                    </stackView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-Yw-drR">
+                        <rect key="frame" x="366" y="45.5" width="54" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="frn-xU-I72"/>
+                            <constraint firstAttribute="width" constant="54" id="rTz-BX-O0g"/>
+                        </constraints>
+                        <state key="normal" image="selectionIndicatorNotActive"/>
+                        <connections>
+                            <action selector="selectButtonPressed" destination="Rz0-p2-fn9" eventType="touchUpInside" id="BUi-Zv-VK8"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JHC-LJ-qTK" secondAttribute="trailing" constant="8" id="1qD-Y9-Ud1"/>
+                    <constraint firstItem="Hmz-Yw-drR" firstAttribute="centerY" secondItem="DUd-RL-Hy1" secondAttribute="centerY" id="85x-sM-A5y"/>
+                    <constraint firstItem="PrV-H4-gnr" firstAttribute="width" secondItem="PrV-H4-gnr" secondAttribute="height" multiplier="1:1" id="DJv-Ys-Te7"/>
+                    <constraint firstItem="uON-Km-KGC" firstAttribute="leading" secondItem="JFz-8J-egB" secondAttribute="trailing" constant="16" id="Dxi-dD-apm"/>
+                    <constraint firstItem="PrV-H4-gnr" firstAttribute="leading" secondItem="DUd-RL-Hy1" secondAttribute="leading" constant="24" id="IpU-oa-3Ta"/>
+                    <constraint firstItem="JFz-8J-egB" firstAttribute="top" secondItem="PrV-H4-gnr" secondAttribute="bottom" id="IwZ-9f-lHm"/>
+                    <constraint firstItem="PrV-H4-gnr" firstAttribute="centerY" secondItem="DUd-RL-Hy1" secondAttribute="centerY" id="Sid-aC-Yez"/>
+                    <constraint firstItem="JHC-LJ-qTK" firstAttribute="leading" secondItem="PrV-H4-gnr" secondAttribute="trailing" constant="22" id="UaJ-G0-Gkh"/>
+                    <constraint firstItem="JFz-8J-egB" firstAttribute="leading" secondItem="PrV-H4-gnr" secondAttribute="trailing" constant="22" id="UjP-Mu-ngL"/>
+                    <constraint firstItem="uON-Km-KGC" firstAttribute="baseline" secondItem="JFz-8J-egB" secondAttribute="baseline" id="i5K-aX-vFU"/>
+                    <constraint firstAttribute="trailing" secondItem="uON-Km-KGC" secondAttribute="trailing" constant="16" id="nQS-4y-tCy"/>
+                    <constraint firstItem="JHC-LJ-qTK" firstAttribute="bottom" secondItem="PrV-H4-gnr" secondAttribute="top" constant="6" id="nul-gf-2D7"/>
+                    <constraint firstAttribute="trailing" secondItem="Hmz-Yw-drR" secondAttribute="trailing" id="z7e-RG-slG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionButtonStackView" destination="uON-Km-KGC" id="u0d-ql-djh"/>
+                <outlet property="favoritButton" destination="rhK-45-mv6" id="V26-uf-Tgu"/>
+                <outlet property="folderIconImageView" destination="PrV-H4-gnr" id="rks-Nd-IcE"/>
+                <outlet property="infoButton" destination="R8q-5B-nhk" id="Mgl-G3-cMt"/>
+                <outlet property="selectionButton" destination="Hmz-Yw-drR" id="RyT-6p-NCl"/>
+                <outlet property="timeLabel" destination="JFz-8J-egB" id="Ngm-xU-VNt"/>
+                <outlet property="titleLabel" destination="JHC-LJ-qTK" id="wgZ-zF-AHT"/>
+            </connections>
+            <point key="canvasLocation" x="-1494.4000000000001" y="-38.23088455772114"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_favourite" width="19" height="19"/>
+        <image name="ic_knowledge_folder" width="28" height="24"/>
+        <image name="ic_knowledge_info" width="18" height="18"/>
+        <image name="selectionIndicatorNotActive" width="22" height="22"/>
+    </resources>
+</document>

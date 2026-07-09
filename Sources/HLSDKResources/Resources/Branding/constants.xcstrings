@@ -1,0 +1,17 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "HELP_LIGHTNING_URL_IOS": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "itms-apps://geo.itunes.apple.com/us/app/lime-app/id867775336?mt=8"
+          }
+        }
+      }
+    }
+  }
+}

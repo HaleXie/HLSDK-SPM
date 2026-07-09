@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="HLBaseKnowledgeListView">
+            <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QbM-zw-SBp" userLabel="Message Container">
+                    <rect key="frame" x="0.0" y="24" width="820" height="0.0"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0Z-bD-VLG" customClass="MessageLabelView" customModule="FBSDK">
+                            <rect key="frame" x="0.0" y="0.0" width="820" height="48"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" placeholder="YES" id="K5T-1g-b0v"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="1hr-pO-DiK"/>
+                    <constraints>
+                        <constraint firstItem="G0Z-bD-VLG" firstAttribute="leading" secondItem="1hr-pO-DiK" secondAttribute="leading" id="RIZ-T4-MDf"/>
+                        <constraint firstItem="G0Z-bD-VLG" firstAttribute="trailing" secondItem="1hr-pO-DiK" secondAttribute="trailing" id="ZHH-rx-OFq"/>
+                        <constraint firstItem="G0Z-bD-VLG" firstAttribute="top" secondItem="1hr-pO-DiK" secondAttribute="top" id="lRv-BX-Olq"/>
+                    </constraints>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xnq-7k-UZx" userLabel="Knowledge List" customClass="KnowledgeListTableView" customModule="FBSDK">
+                    <rect key="frame" x="0.0" y="24" width="820" height="1136"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByY-Lw-LgQ" customClass="FloatButton" customModule="FBSDK">
+                    <rect key="frame" x="752" y="1092" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="mOP-YO-m95"/>
+                        <constraint firstAttribute="height" constant="60" id="ngW-KB-RLE"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="15_add"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="15_add"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ByY-Lw-LgQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-8" id="2Lf-W1-hS4"/>
+                <constraint firstItem="Xnq-7k-UZx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Eq4-Xj-T9t"/>
+                <constraint firstItem="Xnq-7k-UZx" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Mdy-Va-pt4"/>
+                <constraint firstItem="QbM-zw-SBp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NkE-LG-np8"/>
+                <constraint firstItem="ByY-Lw-LgQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-8" id="PAZ-J8-AU0"/>
+                <constraint firstItem="Xnq-7k-UZx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RA7-2f-Nlt"/>
+                <constraint firstItem="Xnq-7k-UZx" firstAttribute="top" secondItem="QbM-zw-SBp" secondAttribute="bottom" id="Ra9-vf-EuE"/>
+                <constraint firstItem="QbM-zw-SBp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dEo-CX-2FD"/>
+                <constraint firstItem="QbM-zw-SBp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dIT-hk-rgg"/>
+            </constraints>
+            <connections>
+                <outlet property="createKnowledgeButton" destination="ByY-Lw-LgQ" id="RtJ-4u-Rzy"/>
+                <outlet property="messageLabelView" destination="G0Z-bD-VLG" id="Mse-y7-JTj"/>
+                <outlet property="tableView" destination="Xnq-7k-UZx" id="xXL-5c-aTE"/>
+            </connections>
+            <point key="canvasLocation" x="-69.512195121951223" y="-11.186440677966102"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="15_add" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

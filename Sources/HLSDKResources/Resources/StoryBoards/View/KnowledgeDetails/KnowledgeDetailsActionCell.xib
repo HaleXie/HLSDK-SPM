@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="56" id="Dal-ly-8FL" customClass="KnowledgeDetailsActionCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="490" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dal-ly-8FL" id="Vjq-CS-6Jd">
+                <rect key="frame" x="0.0" y="0.0" width="490" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-2O-Ejg">
+                        <rect key="frame" x="170.5" y="15" width="303.5" height="25"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-2r-KeE">
+                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="25"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="KnowledgeProcedureStartButton"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceTextColor" value="vipaarBlueColor"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startPressed" destination="Dal-ly-8FL" eventType="touchUpInside" id="PpZ-cT-s6h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-zY-7ya">
+                                <rect key="frame" x="125.5" y="0.0" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="DWP-C6-0bv"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="ic_knowledge_share"/>
+                                <connections>
+                                    <action selector="sharePressed" destination="Dal-ly-8FL" eventType="touchUpInside" id="ISm-nk-fuY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7L-S8-Wxe">
+                                <rect key="frame" x="171.5" y="0.0" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="r1y-Xx-2yJ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="ic_favourite"/>
+                                <connections>
+                                    <action selector="favoritePressed" destination="Dal-ly-8FL" eventType="touchUpInside" id="4V3-iX-Pg3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4J-Bo-QAc">
+                                <rect key="frame" x="217.5" y="0.0" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="MOp-Cb-Xiz"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="ic_knowledge_like"/>
+                                <connections>
+                                    <action selector="likePressed" destination="Dal-ly-8FL" eventType="touchUpInside" id="isZ-3J-CZ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBc-pg-hgR">
+                                <rect key="frame" x="263.5" y="0.0" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2bx-dw-4jA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="ic_forward">
+                                    <color key="titleColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forwardPressed" destination="Dal-ly-8FL" eventType="touchUpInside" id="1qf-ls-dIz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="NOi-u6-8Ei"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-Ox-d5N">
+                        <rect key="frame" x="16" y="15" width="67.5" height="25"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEp-vT-dLv">
+                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="wfL-ZN-3LV"/>
+                                </constraints>
+                                <state key="normal" image="ic_knowledge_offline_unavailable"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="offline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tA-ms-3cm">
+                                <rect key="frame" x="29" y="0.0" width="38.5" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="KnowledgeOffline"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YfW-Ox-d5N" firstAttribute="leading" secondItem="Vjq-CS-6Jd" secondAttribute="leading" constant="16" id="Gcg-gJ-M3M"/>
+                    <constraint firstAttribute="trailing" secondItem="vWA-2O-Ejg" secondAttribute="trailing" constant="16" id="HSG-yK-H87"/>
+                    <constraint firstItem="YfW-Ox-d5N" firstAttribute="height" secondItem="vWA-2O-Ejg" secondAttribute="height" id="V2h-X7-clq"/>
+                    <constraint firstItem="YfW-Ox-d5N" firstAttribute="centerY" secondItem="vWA-2O-Ejg" secondAttribute="centerY" id="WwU-EF-esh"/>
+                    <constraint firstItem="vWA-2O-Ejg" firstAttribute="top" secondItem="Vjq-CS-6Jd" secondAttribute="top" constant="15" id="o3b-gB-4cE"/>
+                    <constraint firstAttribute="bottom" secondItem="vWA-2O-Ejg" secondAttribute="bottom" constant="15" id="uHq-5F-Kiv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="favoriteButton" destination="O7L-S8-Wxe" id="iio-f6-awL"/>
+                <outlet property="forwardButton" destination="IBc-pg-hgR" id="Q57-hD-XhU"/>
+                <outlet property="likeButton" destination="w4J-Bo-QAc" id="Dep-E9-NpO"/>
+                <outlet property="offlineButton" destination="iEp-vT-dLv" id="7vg-OF-kqo"/>
+                <outlet property="shareButton" destination="rBQ-zY-7ya" id="rg4-EX-yOi"/>
+                <outlet property="startButton" destination="ibB-2r-KeE" id="phz-hG-G9o"/>
+            </connections>
+            <point key="canvasLocation" x="-71.014492753623188" y="121.20535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_favourite" width="19" height="19"/>
+        <image name="ic_forward" width="19" height="19"/>
+        <image name="ic_knowledge_like" width="18.5" height="18.5"/>
+        <image name="ic_knowledge_offline_unavailable" width="18" height="18"/>
+        <image name="ic_knowledge_share" width="14" height="16"/>
+    </resources>
+</document>

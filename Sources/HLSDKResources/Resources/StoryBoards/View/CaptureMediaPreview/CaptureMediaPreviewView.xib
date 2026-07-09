@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CKh-Cg-8Ni" customClass="CaptureMediaPreviewView" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" verticalHuggingPriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-7D-qda">
+                    <rect key="frame" x="0.0" y="48" width="414" height="310.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Rda-7D-qda" secondAttribute="height" multiplier="4:3" id="tzo-b9-Fjs"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTN-vA-3D7">
+                    <rect key="frame" x="20" y="358.5" width="374" height="437.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RpM-Sg-0wb" customClass="DropDownButton" customModule="FBSDK">
+                            <rect key="frame" x="0.0" y="193" width="374" height="52"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="C9T-Am-0Ya"/>
+                            </constraints>
+                            <connections>
+                                <action selector="openOptions" destination="CKh-Cg-8Ni" eventType="touchUpInside" id="Tpj-dn-Nvw"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="RpM-Sg-0wb" secondAttribute="trailing" id="46b-8F-VFK"/>
+                        <constraint firstItem="RpM-Sg-0wb" firstAttribute="centerY" secondItem="LTN-vA-3D7" secondAttribute="centerY" id="5mO-ax-w2g"/>
+                        <constraint firstItem="RpM-Sg-0wb" firstAttribute="leading" secondItem="LTN-vA-3D7" secondAttribute="leading" id="Wh3-6y-9GU"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="YHD-qn-GYL"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Hrb-XU-ZBP">
+                    <rect key="frame" x="28" y="796" width="358" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xZ-GD-Azs">
+                            <rect key="frame" x="0.0" y="0.0" width="171" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMS-yH-8yI">
+                                    <rect key="frame" x="0.0" y="0.0" width="171" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <state key="normal" title="EDIT">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="disabled">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="CaptureMediaEdit"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="fMS-yH-8yI" secondAttribute="bottom" id="2bb-7v-6Tn"/>
+                                <constraint firstAttribute="trailing" secondItem="fMS-yH-8yI" secondAttribute="trailing" id="F0g-d5-G7n"/>
+                                <constraint firstItem="fMS-yH-8yI" firstAttribute="top" secondItem="9xZ-GD-Azs" secondAttribute="top" id="LKv-9e-wMp"/>
+                                <constraint firstItem="fMS-yH-8yI" firstAttribute="leading" secondItem="9xZ-GD-Azs" secondAttribute="leading" id="lUZ-j3-wSi"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IE-zj-nyL">
+                            <rect key="frame" x="187" y="0.0" width="171" height="50"/>
+                            <color key="backgroundColor" name="main"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <state key="normal" title="SEND">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="CaptureMediaSend"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sendTap" destination="CKh-Cg-8Ni" eventType="touchUpInside" id="n7A-Yh-lP7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="XRX-gk-JNV"/>
+                        <constraint firstAttribute="height" constant="50" id="lSM-Bk-NcW"/>
+                        <constraint firstAttribute="height" constant="40" id="yfe-1B-NpJ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="XRX-gk-JNV"/>
+                            <exclude reference="lSM-Bk-NcW"/>
+                            <exclude reference="yfe-1B-NpJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="XRX-gk-JNV"/>
+                            <include reference="yfe-1B-NpJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="XRX-gk-JNV"/>
+                            <include reference="yfe-1B-NpJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="lSM-Bk-NcW"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="lSM-Bk-NcW"/>
+                        </mask>
+                    </variation>
+                </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="A8R-DI-1yL">
+                    <rect key="frame" x="350" y="811" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gdr-5t-Jtz"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Rda-7D-qda" firstAttribute="trailing" secondItem="gdr-5t-Jtz" secondAttribute="trailing" id="1os-XO-rX9"/>
+                <constraint firstItem="Rda-7D-qda" firstAttribute="centerX" secondItem="CKh-Cg-8Ni" secondAttribute="centerX" id="2LB-Wg-Wi4"/>
+                <constraint firstItem="LTN-vA-3D7" firstAttribute="top" secondItem="Hrb-XU-ZBP" secondAttribute="top" id="7pR-hz-40u"/>
+                <constraint firstItem="gdr-5t-Jtz" firstAttribute="bottom" secondItem="Rda-7D-qda" secondAttribute="bottom" id="9hR-jS-8ic"/>
+                <constraint firstItem="LTN-vA-3D7" firstAttribute="bottom" secondItem="Hrb-XU-ZBP" secondAttribute="bottom" id="9wD-K0-spW"/>
+                <constraint firstItem="Rda-7D-qda" firstAttribute="leading" secondItem="gdr-5t-Jtz" secondAttribute="leading" id="Fsw-5l-5MR"/>
+                <constraint firstAttribute="trailingMargin" secondItem="Hrb-XU-ZBP" secondAttribute="trailing" constant="8" id="Fv6-PD-cvR"/>
+                <constraint firstItem="Hrb-XU-ZBP" firstAttribute="leading" secondItem="LTN-vA-3D7" secondAttribute="trailing" constant="80" id="UDH-3p-ue9"/>
+                <constraint firstItem="Rda-7D-qda" firstAttribute="top" secondItem="gdr-5t-Jtz" secondAttribute="top" id="UrM-Oj-TY6"/>
+                <constraint firstItem="A8R-DI-1yL" firstAttribute="centerY" secondItem="9IE-zj-nyL" secondAttribute="centerY" id="WXz-eO-hPh"/>
+                <constraint firstItem="A8R-DI-1yL" firstAttribute="trailing" secondItem="9IE-zj-nyL" secondAttribute="trailing" constant="-16" id="dgj-P9-4AC"/>
+                <constraint firstItem="LTN-vA-3D7" firstAttribute="top" secondItem="Rda-7D-qda" secondAttribute="bottom" id="gSy-VR-sW3"/>
+                <constraint firstItem="Hrb-XU-ZBP" firstAttribute="leading" secondItem="CKh-Cg-8Ni" secondAttribute="leadingMargin" constant="8" id="iEh-mW-Pyx"/>
+                <constraint firstItem="Hrb-XU-ZBP" firstAttribute="top" secondItem="LTN-vA-3D7" secondAttribute="bottom" id="nKl-kI-8Rb"/>
+                <constraint firstItem="LTN-vA-3D7" firstAttribute="leading" secondItem="CKh-Cg-8Ni" secondAttribute="leadingMargin" id="rJP-ua-bFp"/>
+                <constraint firstItem="LTN-vA-3D7" firstAttribute="leading" secondItem="gdr-5t-Jtz" secondAttribute="leading" constant="16" id="tUp-tA-A0K"/>
+                <constraint firstItem="LTN-vA-3D7" firstAttribute="trailing" secondItem="CKh-Cg-8Ni" secondAttribute="trailingMargin" id="yOE-1D-MND"/>
+                <constraint firstItem="Rda-7D-qda" firstAttribute="top" secondItem="gdr-5t-Jtz" secondAttribute="top" id="yOj-6A-BLe"/>
+                <constraint firstAttribute="bottomMargin" secondItem="Hrb-XU-ZBP" secondAttribute="bottom" constant="16" id="ykD-Ij-Zni"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="9hR-jS-8ic"/>
+                    <exclude reference="2LB-Wg-Wi4"/>
+                    <exclude reference="1os-XO-rX9"/>
+                    <exclude reference="Fsw-5l-5MR"/>
+                    <exclude reference="yOj-6A-BLe"/>
+                    <exclude reference="yOE-1D-MND"/>
+                    <exclude reference="rJP-ua-bFp"/>
+                    <exclude reference="tUp-tA-A0K"/>
+                    <exclude reference="9wD-K0-spW"/>
+                    <exclude reference="gSy-VR-sW3"/>
+                    <exclude reference="7pR-hz-40u"/>
+                    <exclude reference="iEh-mW-Pyx"/>
+                    <exclude reference="UDH-3p-ue9"/>
+                    <exclude reference="nKl-kI-8Rb"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="9hR-jS-8ic"/>
+                    <include reference="2LB-Wg-Wi4"/>
+                    <include reference="yOj-6A-BLe"/>
+                    <include reference="tUp-tA-A0K"/>
+                    <include reference="9wD-K0-spW"/>
+                    <include reference="7pR-hz-40u"/>
+                    <include reference="UDH-3p-ue9"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="9hR-jS-8ic"/>
+                    <include reference="2LB-Wg-Wi4"/>
+                    <include reference="yOj-6A-BLe"/>
+                    <include reference="tUp-tA-A0K"/>
+                    <include reference="9wD-K0-spW"/>
+                    <include reference="7pR-hz-40u"/>
+                    <include reference="UDH-3p-ue9"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="1os-XO-rX9"/>
+                    <include reference="Fsw-5l-5MR"/>
+                    <include reference="yOE-1D-MND"/>
+                    <include reference="rJP-ua-bFp"/>
+                    <include reference="gSy-VR-sW3"/>
+                    <include reference="iEh-mW-Pyx"/>
+                    <include reference="nKl-kI-8Rb"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <include reference="1os-XO-rX9"/>
+                    <include reference="Fsw-5l-5MR"/>
+                    <include reference="yOE-1D-MND"/>
+                    <include reference="rJP-ua-bFp"/>
+                    <include reference="gSy-VR-sW3"/>
+                    <include reference="iEh-mW-Pyx"/>
+                    <include reference="nKl-kI-8Rb"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="contentView" destination="Rda-7D-qda" id="Izn-C9-7J1"/>
+                <outlet property="dropDownButton" destination="RpM-Sg-0wb" id="lcd-KN-SIL"/>
+                <outlet property="editButton" destination="fMS-yH-8yI" id="nGJ-MQ-VBi"/>
+                <outlet property="sendButton" destination="9IE-zj-nyL" id="0zQ-ND-O8z"/>
+            </connections>
+            <point key="canvasLocation" x="-291" y="-647"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="main">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

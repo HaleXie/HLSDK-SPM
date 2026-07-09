@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="90" id="kjT-Vg-bzQ" customClass="CheckboxCustomFieldCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kjT-Vg-bzQ" id="IE4-s9-JGA">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65R-yW-ph5">
+                        <rect key="frame" x="0.0" y="89" width="414" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="fGU-y8-faS"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oz3-bQ-Seh">
+                        <rect key="frame" x="15" y="10" width="388" height="69"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pur-im-OyD">
+                                <rect key="frame" x="0.0" y="16" width="343" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="990" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Checkbox" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-cs-MBn">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="loR-s7-MQB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="990" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text=" errro" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uq9-zb-L1r">
+                                        <rect key="frame" x="0.0" y="20" width="343" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="ssy-ve-h69"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.15686274510000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-HO-g9R">
+                                <rect key="frame" x="358" y="19.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ddk-HO-g9R" secondAttribute="height" multiplier="1:1" id="mU9-rH-jdk"/>
+                                    <constraint firstAttribute="height" constant="30" id="wRo-Zv-kKL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                <state key="normal" image="selectionIndicatorNotActive"/>
+                                <state key="highlighted" image="selectionIndicatorActive"/>
+                                <connections>
+                                    <action selector="onCheckButton:" destination="kjT-Vg-bzQ" eventType="touchUpInside" id="7rX-4X-PCP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="XMU-dK-MBs"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="oz3-bQ-Seh" secondAttribute="trailing" constant="11" id="7pl-gO-TQU"/>
+                    <constraint firstItem="oz3-bQ-Seh" firstAttribute="leading" secondItem="IE4-s9-JGA" secondAttribute="leading" constant="15" id="KbM-Ia-Dcv"/>
+                    <constraint firstItem="65R-yW-ph5" firstAttribute="top" secondItem="oz3-bQ-Seh" secondAttribute="bottom" priority="750" constant="10" id="NvV-Vh-8wv"/>
+                    <constraint firstAttribute="bottom" secondItem="65R-yW-ph5" secondAttribute="bottom" id="Rmf-IC-qsp"/>
+                    <constraint firstItem="65R-yW-ph5" firstAttribute="leading" secondItem="IE4-s9-JGA" secondAttribute="leading" id="jjB-Ce-maS"/>
+                    <constraint firstItem="oz3-bQ-Seh" firstAttribute="top" secondItem="IE4-s9-JGA" secondAttribute="top" constant="10" id="nzD-mo-BiJ"/>
+                    <constraint firstAttribute="trailing" secondItem="65R-yW-ph5" secondAttribute="trailing" id="qQd-Au-xcU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkButton" destination="Ddk-HO-g9R" id="ndb-1U-rzW"/>
+                <outlet property="errorLabel" destination="uq9-zb-L1r" id="KjT-Di-uch"/>
+                <outlet property="mainStackView" destination="pur-im-OyD" id="zmc-AU-P1N"/>
+                <outlet property="titleLabel" destination="0Mh-cs-MBn" id="9vX-k6-Siz"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="112"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="selectionIndicatorActive" width="22" height="22"/>
+        <image name="selectionIndicatorNotActive" width="22" height="22"/>
+    </resources>
+</document>

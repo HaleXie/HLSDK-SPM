@@ -1,0 +1,28 @@
+/* 
+  colors.strings
+
+  Created by Hale Xie on 31/01/2018.
+  Copyright © 2018 hxie. All rights reserved.
+*/
+/*
+"whiteColor" = "#FFFFFF";
+"blackColor" = "#000000";
+"greenColor" = "#00FF00";
+"redColor" = "#FF0000";
+*/
+"vipaarBlueColor"="#00A9E0";
+"lightGrayTableViewBackground"="#EBEBF2";
+"recordingViewbackgroundColor"="#B2B2B2";
+"callNotifyBarInfoColor"="#00A9E2";
+"callNotifyBarPromptColor"="#33CC33";
+"callNotifyBarAlertColor"="#FF0000";
+"chatInfoTextColor"="#242421";
+"chatInfoTableHeaderColor" = "#535353";
+"myBubbleColor" = "#91D2F0";
+"otherBubbleColor" = "#ffcc66";
+"systemBublleColor" = "#cccccc";
+"callPopoverBackgroundColor" = "#2A2A2E";
+"callPopoverButtonColor" = "#3A3A3C";
+"blueColor"="#00A9E0";
+"callPopoverHighlightColor" = "#727274";
+"chatBannerBackgroundColor" = "#FFC153";

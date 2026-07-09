@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="100" id="TFw-NC-Xhr" userLabel="Chat System Cell" customClass="HLWorkboxMessageSystemCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TFw-NC-Xhr" id="ydn-eU-jjn">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a1Q-PH-lU7" userLabel="Container View">
+                        <rect key="frame" x="146.5" y="8" width="35" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcX-dF-mtM">
+                                <rect key="frame" x="8" y="2" width="19" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PcX-dF-mtM" secondAttribute="trailing" constant="8" id="8cS-gD-ycf"/>
+                            <constraint firstItem="PcX-dF-mtM" firstAttribute="top" secondItem="a1Q-PH-lU7" secondAttribute="top" constant="2" id="RwG-AB-QZn"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="ZQF-gJ-0Dd"/>
+                            <constraint firstItem="PcX-dF-mtM" firstAttribute="leading" secondItem="a1Q-PH-lU7" secondAttribute="leading" constant="8" id="e8n-5X-3dI"/>
+                            <constraint firstItem="PcX-dF-mtM" firstAttribute="centerY" secondItem="a1Q-PH-lU7" secondAttribute="centerY" id="fAM-z3-I7n"/>
+                            <constraint firstItem="PcX-dF-mtM" firstAttribute="centerX" secondItem="a1Q-PH-lU7" secondAttribute="centerX" id="ico-QP-0Go"/>
+                            <constraint firstAttribute="width" priority="249" constant="44" id="mtp-Qx-hxj"/>
+                        </constraints>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P68-yH-DJA">
+                        <rect key="frame" x="89" y="57" width="150" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="CSx-RY-e8t"/>
+                            <constraint firstAttribute="height" constant="33" id="v9q-Cr-3y1"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Resend">
+                            <color key="titleColor" name="blueColor"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="ResendInvitation"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceTextColor" value="vipaarBlueColor"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="resendButtonAction:" destination="TFw-NC-Xhr" eventType="touchUpInside" id="fDu-oI-atB"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="P68-yH-DJA" firstAttribute="top" secondItem="a1Q-PH-lU7" secondAttribute="bottom" constant="5" id="Dt7-po-iFR"/>
+                    <constraint firstItem="a1Q-PH-lU7" firstAttribute="top" secondItem="ydn-eU-jjn" secondAttribute="top" constant="8" id="HoA-FD-SeT"/>
+                    <constraint firstItem="P68-yH-DJA" firstAttribute="centerX" secondItem="a1Q-PH-lU7" secondAttribute="centerX" id="NDM-T7-IDn"/>
+                    <constraint firstAttribute="bottom" secondItem="P68-yH-DJA" secondAttribute="bottom" constant="10" id="RyZ-PC-nka"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="a1Q-PH-lU7" secondAttribute="trailing" constant="8" id="XSS-e3-FDo"/>
+                    <constraint firstItem="a1Q-PH-lU7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ydn-eU-jjn" secondAttribute="leading" constant="8" id="bPJ-ji-w7T"/>
+                    <constraint firstItem="a1Q-PH-lU7" firstAttribute="centerX" secondItem="ydn-eU-jjn" secondAttribute="centerX" id="uaM-B7-Ei4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="constraintContentWidth" destination="mtp-Qx-hxj" id="HcS-8S-QMf"/>
+                <outlet property="labelContainerView" destination="a1Q-PH-lU7" id="2X4-27-Dwl"/>
+                <outlet property="messageLabel" destination="PcX-dF-mtM" id="LPp-Ar-brE"/>
+                <outlet property="resendButton" destination="P68-yH-DJA" id="M2A-FJ-4v0"/>
+                <outlet property="resendButtonHeightConstraint" destination="v9q-Cr-3y1" id="K5M-Mu-eRk"/>
+                <outlet property="resendButtonTopConstraint" destination="Dt7-po-iFR" id="opS-wU-Vb7"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="204"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="blueColor">
+            <color red="0.0" green="0.66274509803921566" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

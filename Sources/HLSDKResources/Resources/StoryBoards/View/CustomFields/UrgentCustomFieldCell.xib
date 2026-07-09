@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="111" id="Fmb-NS-ewU" customClass="UrgentCustomFieldCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="111"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fmb-NS-ewU" id="RuD-UN-1s6">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Jb-fC-RuM">
+                        <rect key="frame" x="15" y="10" width="465" height="90"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dcv-Qc-LCp">
+                                <rect key="frame" x="0.0" y="27" width="401" height="36.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="990" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Urgent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXd-u0-k2D">
+                                        <rect key="frame" x="0.0" y="0.0" width="401" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="uWl-my-6fp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="990" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text=" errro" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-fD-0qz">
+                                        <rect key="frame" x="0.0" y="20" width="401" height="16.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16.5" id="11U-rp-771"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                        <color key="textColor" red="0.98823529409999999" green="0.15686274510000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="999" verticalHuggingPriority="999" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kz7-Ti-4vo">
+                                <rect key="frame" x="416" y="29.5" width="51" height="31"/>
+                                <color key="tintColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="onTintColor" name="main"/>
+                                <connections>
+                                    <action selector="onToggleChange:" destination="Fmb-NS-ewU" eventType="valueChanged" id="1aT-SV-pup"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Uz1-cO-gR5"/>
+                        </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wto-HN-UDE">
+                        <rect key="frame" x="0.0" y="110" width="495" height="1"/>
+                        <color key="backgroundColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kur-zd-98b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wto-HN-UDE" firstAttribute="top" secondItem="3Jb-fC-RuM" secondAttribute="bottom" priority="750" constant="10" id="5wa-Rm-98c"/>
+                    <constraint firstAttribute="trailing" secondItem="Wto-HN-UDE" secondAttribute="trailing" id="BLe-SD-DNj"/>
+                    <constraint firstAttribute="trailing" secondItem="3Jb-fC-RuM" secondAttribute="trailing" constant="15" id="QNS-HG-GNC"/>
+                    <constraint firstItem="3Jb-fC-RuM" firstAttribute="leading" secondItem="RuD-UN-1s6" secondAttribute="leading" constant="15" id="VyT-9S-Hhu"/>
+                    <constraint firstAttribute="bottom" secondItem="Wto-HN-UDE" secondAttribute="bottom" id="bZh-3q-pse"/>
+                    <constraint firstItem="3Jb-fC-RuM" firstAttribute="top" secondItem="RuD-UN-1s6" secondAttribute="top" constant="10" id="hRE-q8-PpJ"/>
+                    <constraint firstItem="Wto-HN-UDE" firstAttribute="leading" secondItem="RuD-UN-1s6" secondAttribute="leading" id="sJO-fb-7Ys"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="errorLabel" destination="ZcM-fD-0qz" id="I8e-6b-cbe"/>
+                <outlet property="mainStackView" destination="dcv-Qc-LCp" id="JOa-FE-wec"/>
+                <outlet property="titleLabel" destination="uXd-u0-k2D" id="UQy-04-N99"/>
+                <outlet property="toggleSwitch" destination="kz7-Ti-4vo" id="REz-wu-5Ho"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="284"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="main">
+            <color red="0.0" green="0.66299998760223389" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

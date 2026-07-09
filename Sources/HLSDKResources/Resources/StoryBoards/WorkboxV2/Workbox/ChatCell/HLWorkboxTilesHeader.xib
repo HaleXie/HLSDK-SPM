@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLWorkboxTilesHeader" customModule="FBSDK">
+            <connections>
+                <outlet property="animatedHeaderHeightConstraint" destination="teE-gC-oPc" id="dHb-oz-wVa"/>
+                <outlet property="animatedHeaderViewBottomConstraint" destination="JKQ-0A-DQ4" id="Iig-ka-scx"/>
+                <outlet property="animatedTileHeaderView" destination="GNo-nI-wRf" id="iND-S6-o80"/>
+                <outlet property="autoguideButton" destination="25U-e2-G1b" id="BpH-ld-sSm"/>
+                <outlet property="autoguideView" destination="9Wb-gV-rv4" id="pMg-Yv-SON"/>
+                <outlet property="chatButton" destination="hTi-pW-BMO" id="tjW-t4-ldZ"/>
+                <outlet property="constantHeaderHeightConstraint" destination="ajf-mx-2Vz" id="rtX-Kk-Wbj"/>
+                <outlet property="constantTilesHeaderView" destination="OAd-to-qqq" id="Ffc-mi-5pD"/>
+                <outlet property="quickKnowledgeButton" destination="vEf-FK-dud" id="oqJ-wl-RUf"/>
+                <outlet property="startAutoguideIconView" destination="1C2-qi-9XN" id="CCQ-Fw-ixI"/>
+                <outlet property="startAutoguideView" destination="TtF-qk-EFn" id="CbH-uk-uZV"/>
+                <outlet property="startChatIconView" destination="SBD-MY-Ae9" id="sRe-Hf-7GU"/>
+                <outlet property="startChatView" destination="pAv-OK-N3x" id="R9U-eu-hUv"/>
+                <outlet property="startVideoIconView" destination="knc-e4-N3X" id="vIS-M2-cnD"/>
+                <outlet property="videoButton" destination="SHh-jd-c85" id="UZy-hw-LqJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAd-to-qqq" userLabel="TilesHeader">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-De-fAj">
+                            <rect key="frame" x="15.999999999999986" y="4" width="236.66666666666663" height="32"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHh-jd-c85">
+                                    <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="32"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="video" catalog="system"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="video" catalog="system"/>
+                                    <connections>
+                                        <action selector="startVideoClick:" destination="-1" eventType="touchUpInside" id="6RX-ah-8Bg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTi-pW-BMO">
+                                    <rect key="frame" x="95.333333333333329" y="0.0" width="52.333333333333329" height="32"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="video" catalog="system"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ellipsis.message.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="startChatClick:" destination="-1" eventType="touchUpInside" id="dNZ-Pv-IdQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEf-FK-dud">
+                                    <rect key="frame" x="187.66666666666666" y="0.0" width="49" height="32"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="video" catalog="system"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="icon_small_procedures"/>
+                                    <connections>
+                                        <action selector="startQuickKnowledgeClick:" destination="-1" eventType="touchUpInside" id="EO1-Ly-eBq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="a3o-AP-Dp1"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Bgm-De-fAj" firstAttribute="leading" secondItem="OAd-to-qqq" secondAttribute="leading" constant="16" id="2gu-Rq-Y8u"/>
+                        <constraint firstAttribute="height" constant="40" id="ajf-mx-2Vz"/>
+                        <constraint firstItem="Bgm-De-fAj" firstAttribute="centerY" secondItem="OAd-to-qqq" secondAttribute="centerY" id="y1I-83-ec7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNo-nI-wRf" userLabel="AnimatedView">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="150"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fVn-Of-wqF">
+                            <rect key="frame" x="15" y="16" width="994" height="118"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bl4-i2-vGO">
+                                    <rect key="frame" x="0.0" y="0.0" width="241" height="118"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Workbox" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIC-TY-fRI">
+                                            <rect key="frame" x="78.666666666666671" y="10" width="84.000000000000014" height="15.666666666666664"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="TilesNewWorkbox"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            </variation>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="knc-e4-N3X">
+                                            <rect key="frame" x="100.66666666666667" y="41.333333333333329" width="40.000000000000014" height="35.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="knc-e4-N3X" secondAttribute="height" multiplier="1:1" id="8La-DH-1AQ"/>
+                                                <constraint firstAttribute="height" constant="40" id="Daa-Vp-EL0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Video Call" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfh-Db-Bn7">
+                                            <rect key="frame" x="84" y="92.333333333333329" width="73" height="15.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="TilesHeaderCall"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="blueColor"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="jIC-TY-fRI" firstAttribute="top" secondItem="bl4-i2-vGO" secondAttribute="top" constant="10" id="3hB-CS-f8w"/>
+                                        <constraint firstItem="Jfh-Db-Bn7" firstAttribute="centerX" secondItem="bl4-i2-vGO" secondAttribute="centerX" id="9A0-bk-KQL"/>
+                                        <constraint firstItem="knc-e4-N3X" firstAttribute="centerY" secondItem="bl4-i2-vGO" secondAttribute="centerY" id="hRn-m6-I6e"/>
+                                        <constraint firstItem="jIC-TY-fRI" firstAttribute="centerX" secondItem="bl4-i2-vGO" secondAttribute="centerX" id="okV-8D-cLZ"/>
+                                        <constraint firstItem="knc-e4-N3X" firstAttribute="centerX" secondItem="bl4-i2-vGO" secondAttribute="centerX" id="wBA-kU-yuU"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jfh-Db-Bn7" secondAttribute="bottom" constant="10" id="xBK-dU-4qI"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="hlEnableBackgroundTheme" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="hlResourceBackgroundColor" value="vipaarBlueColor"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="3Co-Fp-oKU" appends="YES" id="sgu-lz-cDe"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-OK-N3x">
+                                    <rect key="frame" x="251" y="0.0" width="241" height="118"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Workbox" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a85-I4-N5X">
+                                            <rect key="frame" x="78.666666666666686" y="10" width="84" height="15.666666666666664"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="TilesNewWorkbox"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            </variation>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SBD-MY-Ae9">
+                                            <rect key="frame" x="100.66666666666669" y="41.333333333333329" width="40" height="35.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="AYk-e4-iVF"/>
+                                                <constraint firstAttribute="width" secondItem="SBD-MY-Ae9" secondAttribute="height" multiplier="1:1" id="h6b-ku-xgm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TilesHeaderChat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqX-Ic-UJb">
+                                            <rect key="frame" x="70" y="92.333333333333329" width="101.33333333333331" height="15.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="TilesHeaderChat"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="wqX-Ic-UJb" secondAttribute="bottom" constant="10" id="33S-YQ-Knu"/>
+                                        <constraint firstItem="SBD-MY-Ae9" firstAttribute="centerX" secondItem="pAv-OK-N3x" secondAttribute="centerX" id="AeU-je-9Eh"/>
+                                        <constraint firstItem="wqX-Ic-UJb" firstAttribute="centerX" secondItem="pAv-OK-N3x" secondAttribute="centerX" id="XG0-DE-2un"/>
+                                        <constraint firstItem="a85-I4-N5X" firstAttribute="centerX" secondItem="pAv-OK-N3x" secondAttribute="centerX" id="crs-aL-kPa"/>
+                                        <constraint firstItem="SBD-MY-Ae9" firstAttribute="centerY" secondItem="pAv-OK-N3x" secondAttribute="centerY" id="kCl-fL-AtB"/>
+                                        <constraint firstItem="a85-I4-N5X" firstAttribute="top" secondItem="pAv-OK-N3x" secondAttribute="top" constant="10" id="pNv-5h-FRS"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="8NR-zG-6ea" appends="YES" id="P9S-OQ-YDV"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtF-qk-EFn">
+                                    <rect key="frame" x="502" y="0.0" width="241" height="118"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Workbox" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA4-ts-H6x">
+                                            <rect key="frame" x="78.666666666666629" y="10" width="84" height="15.666666666666664"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="TilesNewWorkbox"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            </variation>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1C2-qi-9XN">
+                                            <rect key="frame" x="99.666666666666629" y="40.333333333333329" width="42" height="37.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="Rmt-ik-usg"/>
+                                                <constraint firstAttribute="width" secondItem="1C2-qi-9XN" secondAttribute="height" multiplier="1:1" id="ezz-Bu-OAl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Autoguide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8d-MF-lCY">
+                                            <rect key="frame" x="83.666666666666629" y="92.333333333333329" width="73.666666666666686" height="15.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="TilesHeaderAutoguide"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="heightClass=regular-widthClass=regular">
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="oA4-ts-H6x" firstAttribute="top" secondItem="TtF-qk-EFn" secondAttribute="top" constant="10" id="Q4E-Vj-5Ce"/>
+                                        <constraint firstAttribute="bottom" secondItem="i8d-MF-lCY" secondAttribute="bottom" constant="10" id="WXv-4s-B6l"/>
+                                        <constraint firstItem="oA4-ts-H6x" firstAttribute="centerX" secondItem="TtF-qk-EFn" secondAttribute="centerX" id="aTy-8o-nlF"/>
+                                        <constraint firstItem="1C2-qi-9XN" firstAttribute="centerX" secondItem="TtF-qk-EFn" secondAttribute="centerX" id="kUB-zW-Rj8"/>
+                                        <constraint firstItem="i8d-MF-lCY" firstAttribute="centerX" secondItem="TtF-qk-EFn" secondAttribute="centerX" id="mOP-th-g4a"/>
+                                        <constraint firstItem="1C2-qi-9XN" firstAttribute="centerY" secondItem="TtF-qk-EFn" secondAttribute="centerY" id="tKF-QN-LbP"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="x7c-Ny-rW8" appends="YES" id="7bY-CS-ljZ"/>
+                                    </connections>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wb-gV-rv4">
+                                    <rect key="frame" x="753" y="0.0" width="241" height="118"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25U-e2-G1b">
+                                            <rect key="frame" x="0.0" y="41.333333333333343" width="241" height="35.666666666666657"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="Button">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.66666666669999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                            </state>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                            </buttonConfiguration>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="WhatHelpThread"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="autoguideAction:" destination="-1" eventType="touchUpInside" id="a8c-jB-POl"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="25U-e2-G1b" secondAttribute="trailing" constant="8" id="DhL-Mv-Mew">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
+                                        <constraint firstItem="25U-e2-G1b" firstAttribute="centerY" secondItem="9Wb-gV-rv4" secondAttribute="centerY" id="WjF-94-F0h"/>
+                                        <constraint firstItem="25U-e2-G1b" firstAttribute="leading" secondItem="9Wb-gV-rv4" secondAttribute="leading" constant="8" id="ne0-z5-Uef">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <gestureRecognizers/>
+                            <variation key="heightClass=regular-widthClass=compact" spacing="10"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="fVn-Of-wqF" secondAttribute="bottom" constant="16" id="AAn-av-tL6"/>
+                        <constraint firstItem="fVn-Of-wqF" firstAttribute="top" secondItem="GNo-nI-wRf" secondAttribute="top" constant="16" id="MYM-Vw-MAL"/>
+                        <constraint firstItem="fVn-Of-wqF" firstAttribute="leading" secondItem="GNo-nI-wRf" secondAttribute="leading" constant="32" id="fPa-xY-ZWz">
+                            <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="fVn-Of-wqF" secondAttribute="trailing" constant="25" id="jxp-7q-40t">
+                            <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="150" id="teE-gC-oPc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GNo-nI-wRf" secondAttribute="bottom" id="JKQ-0A-DQ4"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="OAd-to-qqq" secondAttribute="bottom" id="QD1-cF-wDT"/>
+                <constraint firstItem="OAd-to-qqq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VI1-RR-PRK"/>
+                <constraint firstAttribute="trailing" secondItem="OAd-to-qqq" secondAttribute="trailing" id="ZK6-HF-c8z"/>
+                <constraint firstItem="GNo-nI-wRf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ixS-jm-FOk"/>
+                <constraint firstItem="OAd-to-qqq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lz5-wc-LIJ"/>
+                <constraint firstAttribute="trailing" secondItem="GNo-nI-wRf" secondAttribute="trailing" id="mvV-tZ-uJT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-5654.9618320610689" y="-42.253521126760567"/>
+        </view>
+        <tapGestureRecognizer id="3Co-Fp-oKU">
+            <connections>
+                <action selector="startVideoTapped:" destination="-1" id="i5m-kj-EAg"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="8NR-zG-6ea">
+            <connections>
+                <action selector="startChatTapped:" destination="-1" id="E8R-dQ-iIr"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="x7c-Ny-rW8">
+            <connections>
+                <action selector="startQuickKnowledgeTapped:" destination="-1" id="Pea-Yk-OhC"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ellipsis.message.fill" catalog="system" width="128" height="114"/>
+        <image name="icon_small_procedures" width="25" height="25"/>
+        <image name="video" catalog="system" width="128" height="82"/>
+        <image name="video.fill" catalog="system" width="128" height="81"/>
+        <namedColor name="blueColor">
+            <color red="0.0" green="0.66274509803921566" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9lM-Hu-m1B" customClass="ImageViewerCell" customModule="FBSDK">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9lM-Hu-m1B" id="8aw-yg-1ru">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="50.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOg-l3-Zty">
+                        <rect key="frame" x="13" y="16" width="35.5" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="3Sg-hH-KBZ"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="7JU-hA-tqr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="hlResourceBackgroundColor" value="vipaarBlueColor"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-LF-BiX">
+                        <rect key="frame" x="60.5" y="16" width="342.5" height="18.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vic-LF-BiX" firstAttribute="top" secondItem="FOg-l3-Zty" secondAttribute="top" id="2Xb-kT-Fjw"/>
+                    <constraint firstItem="FOg-l3-Zty" firstAttribute="leading" secondItem="8aw-yg-1ru" secondAttribute="leading" constant="13" id="7ks-SE-Ks7"/>
+                    <constraint firstItem="Vic-LF-BiX" firstAttribute="leading" secondItem="FOg-l3-Zty" secondAttribute="trailing" constant="12" id="Aga-T3-Cpx"/>
+                    <constraint firstAttribute="bottom" secondItem="Vic-LF-BiX" secondAttribute="bottom" constant="16" id="EjE-Hh-qjp"/>
+                    <constraint firstAttribute="trailing" secondItem="Vic-LF-BiX" secondAttribute="trailing" constant="11" id="MEs-rq-1rM"/>
+                    <constraint firstItem="FOg-l3-Zty" firstAttribute="top" secondItem="8aw-yg-1ru" secondAttribute="top" constant="16" id="hCu-2v-KPr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="Vic-LF-BiX" id="Akn-bB-2Cy"/>
+                <outlet property="numberLabel" destination="FOg-l3-Zty" id="yHt-bE-ts9"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="108"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_annotation_image_sitcker_off.svg",
+      "idiom" : "universal",
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

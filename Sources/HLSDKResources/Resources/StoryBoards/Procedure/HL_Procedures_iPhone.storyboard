@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Procedure Steps View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HLProcedureStepsViewController" id="Y6W-OH-hqX" customClass="HLProcedureStepsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtW-bl-Auf">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCC-PC-QG2">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GSB-ff-q3q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceText" value="KnowledgeProcedureStartNowButton"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceBackgroundColor" value="vipaarBlueColor"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tAt-FY-HNf"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Us1-hy-qMC" customClass="ProcedureStepsTableView" customModule="FBSDK">
+                                <rect key="frame" x="0.0" y="48" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZY-S1-94C" customClass="FloatButton" customModule="FBSDK">
+                                <rect key="frame" x="346" y="750" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="aI4-9j-zk3"/>
+                                    <constraint firstAttribute="width" constant="60" id="q05-pl-WRD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="18_forward"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="hlResourceImage" value="18_forward"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="forwardTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3sz-rO-awr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Us1-hy-qMC" secondAttribute="trailing" id="5Bp-YQ-K89"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gCC-PC-QG2" secondAttribute="bottom" id="91x-86-0wV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RZY-S1-94C" secondAttribute="trailing" constant="8" id="DeM-x4-VcU"/>
+                            <constraint firstAttribute="trailing" secondItem="gCC-PC-QG2" secondAttribute="trailing" id="EWG-Fc-kTN"/>
+                            <constraint firstItem="gCC-PC-QG2" firstAttribute="top" secondItem="Us1-hy-qMC" secondAttribute="bottom" id="FH9-4v-ShG"/>
+                            <constraint firstItem="Us1-hy-qMC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="NHF-QY-HRO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RZY-S1-94C" secondAttribute="bottom" constant="52" id="bZZ-QT-Ddr"/>
+                            <constraint firstItem="Us1-hy-qMC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jPA-9R-wtm"/>
+                            <constraint firstItem="gCC-PC-QG2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zc0-v5-0sM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forwardButton" destination="RZY-S1-94C" id="urY-hT-iod"/>
+                        <outlet property="startButton" destination="gCC-PC-QG2" id="fmH-CL-boQ"/>
+                        <outlet property="tableView" destination="Us1-hy-qMC" id="5ke-Qu-z1B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="18_forward" width="20" height="13.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,12 @@
+/* 
+  widgets.strings
+  BrandingDemo
+
+  Created by Hale Xie on 31/01/2018.
+  Copyright © 2018 hxie. All rights reserved.
+
+"msg_holder_3.text" = "message_3";
+"msg_holder_3.backgroundColor" = "whiteColor";
+*/
+"vipaarBlueButton.tintColor"="vipaarBlueColor";
+"vipaarBlueLabel.textColor"="vipaarBlueColor";
