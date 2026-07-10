@@ -63,10 +63,7 @@ let package = Package(
                 "HLSDKSwift",
                 "HLSDKProduct"
             ],
-            path: "Sources/HLSDKSwiftProduct",
-            linkerSettings: [
-                .unsafeFlags(["-ObjC"])
-            ]
+            path: "Sources/HLSDKSwiftProduct"
         ),
         .target(
             name: "HLSDKScreenSharingProduct",
@@ -74,10 +71,7 @@ let package = Package(
                 "HLSDKScreenSharing",
                 .product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")
             ],
-            path: "Sources/HLSDKScreenSharingProduct",
-            linkerSettings: [
-                .unsafeFlags(["-ObjC"])
-            ]
+            path: "Sources/HLSDKScreenSharingProduct"
         ),
         .target(
             name: "HLSDKProduct",
@@ -114,13 +108,7 @@ let package = Package(
                 .product(name: "ZIPFoundation", package: "ZIPFoundation"),
                 .product(name: "UIActivityIndicator-for-SDWebImage", package: "UIActivityIndicator-for-SDWebImage")
             ],
-            path: "Sources/HLSDKProduct",
-            linkerSettings: [
-                // Static XCFrameworks embed Objective-C categories (e.g. FBLPromise+LBTimeout)
-                // that are only reachable via dynamic dispatch. Without -ObjC the linker strips
-                // those category object files and runtime calls like lbTimeoutOn crash.
-                .unsafeFlags(["-ObjC"])
-            ]
+            path: "Sources/HLSDKProduct"
         ),
         .target(
             name: "HLSDKResources",
