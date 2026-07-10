@@ -30,15 +30,15 @@ Pin an exact release version (for example `0.1.2`) rather than a branch.
 
 ## Add `-ObjC` to Other Linker Flags
 
-Every **main app target** that links `HLSDK` or `HLSDKSwift` must add `-ObjC` to **Other Linker Flags**.
+Every target that links `HLSDK`, `HLSDKSwift`, or `HLSDKScreenSharing` must add `-ObjC` to **Other Linker Flags**.
 
-The main `HLSDK` XCFramework is a static archive with Objective-C categories. Integrators set this flag on their own targets because Swift Package Manager does not allow remote packages to inject linker flags.
+The HLSDK XCFrameworks are static archives with Objective-C categories. Integrators set this flag on their own targets because Swift Package Manager does not allow remote packages to inject linker flags.
 
 ### In Xcode
 
 1. Open your app project in Xcode.
 2. Select the **Project** navigator → your project.
-3. Under **TARGETS**, select the **app target** that links `HLSDK` or `HLSDKSwift` (not a ReplayKit extension).
+3. Under **TARGETS**, select the app or ReplayKit extension target that links an HLSDK product.
 4. Open the **Build Settings** tab.
 5. Set the filter to **All** and search for `Other Linker Flags`.
 6. Double-click **Other Linker Flags** for **Debug** and **Release**.
@@ -46,7 +46,7 @@ The main `HLSDK` XCFramework is a static archive with Objective-C categories. In
    ```
    -ObjC
    ```
-8. Repeat for every app target that links `HLSDK` or `HLSDKSwift` (for example separate iOS and visionOS app targets).
+8. Repeat for every target that links `HLSDK`, `HLSDKSwift`, or `HLSDKScreenSharing`.
 
 ### Which targets need `-ObjC`
 
@@ -54,11 +54,11 @@ The main `HLSDK` XCFramework is a static archive with Objective-C categories. In
 |-------------------|-------------|
 | `HLSDK` | Yes |
 | `HLSDKSwift` | Yes |
-| `HLSDKScreenSharing` only (ReplayKit extension) | No |
+| `HLSDKScreenSharing` (ReplayKit extension) | Yes |
 
 ### Verify
 
-In Build Settings, the app target should show:
+In Build Settings, each target should show:
 
 ```
 OTHER_LDFLAGS = -ObjC
