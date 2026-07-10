@@ -117,9 +117,9 @@ let package = Package(
                 .process("Resources")
             ]
         ),
-        .binaryTarget(name: "HLSDK", url: "https://github.com/HaleXie/HLSDK-SPM/releases/download/0.1.1/HLSDK.xcframework.zip", checksum: "43b2b73dcec97d84f71f5d73ee4e31187b5d10727c96e4b22d8a00af64c96f4f"),
-        .binaryTarget(name: "HLSDKSwift", url: "https://github.com/HaleXie/HLSDK-SPM/releases/download/0.1.1/HLSDKSwift.xcframework.zip", checksum: "815b7ee747032db23ca453d949f1a1ba73bf919e2a04da9610a164025a85379f"),
-        .binaryTarget(name: "HLSDKScreenSharing", url: "https://github.com/HaleXie/HLSDK-SPM/releases/download/0.1.1/HLSDKScreenSharing.xcframework.zip", checksum: "56801c78696c8c7bea2a9da25a2ef238756faf979df8a6e54b1da37ecc173b9c")
+        .binaryTarget(name: "HLSDK", url: "https://github.com/HaleXie/HLSDK-SPM/releases/download/0.1.3/HLSDK.xcframework.zip", checksum: "44c1e26d4765c2933576fa3daadc5ed09efec6d5626bd3978bd0dfb01f197f40"),
+        .binaryTarget(name: "HLSDKSwift", url: "https://github.com/HaleXie/HLSDK-SPM/releases/download/0.1.3/HLSDKSwift.xcframework.zip", checksum: "17977a425ca386860e6147b40893a4f02ed6f8565b33eb9a64895730e9abc7f9"),
+        .binaryTarget(name: "HLSDKScreenSharing", url: "https://github.com/HaleXie/HLSDK-SPM/releases/download/0.1.3/HLSDKScreenSharing.xcframework.zip", checksum: "4711d253ac21c69f3a79af8045f9e9863678129e45008d9858e5d5dd5e7b6010")
     ],
     swiftLanguageModes: [.v5]
 )
